@@ -25,7 +25,7 @@
           <div class="form-group">
               <label class="control-label col-sm-2" for="pwd">course:</label>
               <div class="col-sm-10">          
-                  <input type="text" class="form-control" formControlName="course" id="course" name="course" [(ngModel)]="notificationItem.course">
+                  <input type="text" class="form-control" formControlName="course" id="course" name="course" placeholder="Enter course name" [(ngModel)]="notificationItem.course">
                 <label for="phonenoerror" id="phonenoerror" class="form-label"></label>
               </div>
             </div>
@@ -33,7 +33,7 @@
                 <label class="control-label col-sm-2" for="pwd">message:</label>
                 <div class="col-sm-10">          
                     <!-- <input type="text" class="form-control" formControlName="message" id="message" name="message" [(ngModel)]="notificationItem.message"> -->
-                    <textarea class="form-control" formControlName="message" id="message" name="message" [(ngModel)]="notificationItem.message"></textarea>
+                    <textarea class="form-control" formControlName="message" id="message" name="message" placeholder="Enter message" [(ngModel)]="notificationItem.message"></textarea>
                   <label for="phonenoerror" id="phonenoerror" class="form-label"></label>
                 </div>
               </div>
@@ -41,7 +41,7 @@
             <div class="col-sm-offset-2 col-sm-10">
               <!-- <button type="submit" class="btn btn-info">Submit</button> -->
               <button mat-stroked-button color="accent" class="btn-block"
-              [disabled]="addnotificationForm.pristine || addnotificationForm.invalid " class="btn btn-success">Register</button>
+              [disabled]="addnotificationForm.pristine || addnotificationForm.invalid " class="btn btn-success">Submit</button>
             </div>
           </div>
         </form>

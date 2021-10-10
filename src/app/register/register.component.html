@@ -19,13 +19,13 @@
         <div class="form-group">
           <label class="control-label col-sm-2" for="pwd">Username:</label>
           <div class="col-sm-10">          
-            <input type="text" class="form-control" formControlName="username" name="username" id="username" [(ngModel)]="userItem.username">
+            <input type="text" class="form-control" formControlName="username" name="username" id="username" placeholder="Enter email" [(ngModel)]="userItem.username">
           </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="pwd">Password:</label>
             <div class="col-sm-10">          
-                <input type="password" class="form-control" formControlName="password" id="password" name="password" [(ngModel)]="userItem.password">
+                <input type="password" class="form-control" formControlName="password" id="password" name="password" placeholder="Enter password" [(ngModel)]="userItem.password">
               <label for="phonenoerror" id="phonenoerror" class="form-label"></label>
             </div>
           </div>
@@ -36,6 +36,8 @@
                   <option selected>Select Any</option>
                   <option value="faculty">Faculty</option>
                   <option value="student">Student</option>
+                  <!-- <option>Faculty</option>
+                  <option>Student</option> -->
                 </select>
                 <label for="phonenoerror" id="phonenoerror" class="form-label"></label>
               </div>
@@ -51,7 +53,8 @@
           <label class="control-label col-sm-2" for="pwd">Registered User?</label>
           <div class="col-sm-10">          
               <!-- <a href="signup.html" class="btn btn-primary">Sign Up</a> -->
-              <a href="/login" class="btn btn-primary">Log in</a>
+              <!-- <a href="/login" class="btn btn-primary">Log in</a> -->
+              <a routerLink="../login" class="btn btn-primary">Log in</a>
             </div>
         </div>
       </form>

@@ -42,7 +42,7 @@ export class VerifyappComponent implements OnInit {
   {    
     this.profileService.editStudent(this.studentitem);   
     alert("Success");
-    //this.router.navigate(['book']);
+    this.router.navigate(['viewapp']);
     //this.router.navigate(['books']);
   }
 

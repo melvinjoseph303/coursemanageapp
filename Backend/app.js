@@ -108,13 +108,15 @@ app.post('/login', (req, res) => {
 //     } else {
   Userdata.findOne({ username: username,password: password }, function (err, user) {
             console.log(req.body, "check for user");
-            let type = user.usertype;
-            console.log("type:",type);
+            // let type = user.usertype;
+            // console.log("type:",type);
 
             if (err) {
                 res.send({ status: false, data: 'Response error. No Internet' });
             }
             else if (user) {
+                let type = user.usertype;
+                console.log("type:",type);
                 console.log("normal user login success")
                 req.session.uname = username;
                 //let uname = req.session.uname;
@@ -143,11 +145,11 @@ app.post('/login', (req, res) => {
 });
 
 //app.use(function(req, res, next){
-app.get('*', function(req, res,next){
-  res.locals.user = req.user;
-  console.log("user",req.user);
-  next();
-});
+// app.get('*', function(req, res,next){
+//   res.locals.user = req.user;
+//   console.log("user",req.user);
+//   next();
+// });
 
 //new user
 
