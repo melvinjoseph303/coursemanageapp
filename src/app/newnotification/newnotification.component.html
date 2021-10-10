@@ -1,0 +1,59 @@
+<div class="container-fluid text-center" style="margin-top: 20px;">    
+    <div class="row content">
+      <div class="col-sm-3 sidenav">
+        <!-- <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p> -->
+      </div>
+      <div class="col-sm-6 text-left"> 
+        <h1>Add Notification</h1>
+        <form class="form-horizontal" [formGroup]="addnotificationForm" (ngSubmit)="addNotification()">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Sender's Username:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" formControlName="username" name="username" id="inputname" placeholder="Enter sender's name" [(ngModel)]="notificationItem.username">
+              <label for="emailerror" id="emailerror" class="form-label"></label>
+            </div>        
+          </div>
+         
+          <!-- <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">qualification:</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" formControlName="qualification" name="qualification" id="qualification" [(ngModel)]="course.qualification">
+            </div>
+          </div> -->
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">course:</label>
+              <div class="col-sm-10">          
+                  <input type="text" class="form-control" formControlName="course" id="course" name="course" [(ngModel)]="notificationItem.course">
+                <label for="phonenoerror" id="phonenoerror" class="form-label"></label>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">message:</label>
+                <div class="col-sm-10">          
+                    <!-- <input type="text" class="form-control" formControlName="message" id="message" name="message" [(ngModel)]="notificationItem.message"> -->
+                    <textarea class="form-control" formControlName="message" id="message" name="message" [(ngModel)]="notificationItem.message"></textarea>
+                  <label for="phonenoerror" id="phonenoerror" class="form-label"></label>
+                </div>
+              </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <!-- <button type="submit" class="btn btn-info">Submit</button> -->
+              <button mat-stroked-button color="accent" class="btn-block"
+              [disabled]="addnotificationForm.pristine || addnotificationForm.invalid " class="btn btn-success">Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-3 sidenav">
+        <!-- <div class="well">
+          <p>ADS</p>
+        </div>
+        <div class="well">
+          <p>ADS</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,26 @@
+ <!-- Pricing Row -->
+ <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>COURSES</h2>
+    <p>Choose a course that fits your needs.</p><br>
+    
+
+    <div class="w3-third w3-margin-bottom" *ngFor='let course of courses'>
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">{{course.name}}</p>
+        </li>
+        <li class="w3-padding-16"><b>{{course.department}}</b> Department</li>
+        <li class="w3-padding-16"><b>{{course.noofseats}}</b> No of Seats</li>
+        <!-- <li class="w3-padding-16"><b>50</b> Start Date</li>
+        <li class="w3-padding-16"><b>50</b> End Date</li> -->
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-clock-o"></i> 3<span class="w3-opacity">Years</span></h2>
+          <!-- <span class="w3-opacity">Years</span> -->
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <!-- <button routerLink="profile" class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Join Now</button> -->
+          <a routerLink="../profile" class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Join Now</a>
+        </li>
+      </ul>
+    </div>
+</div>
